@@ -1,0 +1,71 @@
+<div center-container main-content-margin>
+
+  <div msg-main>
+
+    <md-tab-group>
+      <md-tab label="全部">
+        <md-card class="main-card" *ngFor="let item of items">
+
+          <md-card-header>
+            <div md-card-avatar class="example-header-image"></div>
+            <md-card-title>{{ item.title }}</md-card-title>
+            <md-card-subtitle>Dog Breed</md-card-subtitle>
+          </md-card-header>
+
+          <md-card-content *ngIf="item.img; else noPicTpl" hasPic bottom-0>
+            <img main-item-img src="{{ item.img }}">{{ item.content }}
+          </md-card-content>
+
+          <ng-template #noPicTpl>
+            <md-card-content bottom-0>
+              {{ item.content }}
+            </md-card-content>
+          </ng-template>
+
+        </md-card>
+      </md-tab>
+      <md-tab label="未读">
+        <md-card class="main-card" *ngFor="let item of items">
+
+          <md-card-header>
+            <div md-card-avatar class="example-header-image"></div>
+            <md-card-title>{{ item.title }}</md-card-title>
+            <md-card-subtitle>Dog Breed</md-card-subtitle>
+          </md-card-header>
+
+          <md-card-content *ngIf="item.img; else noPicTpl" hasPic bottom-0>
+            <img main-item-img src="{{ item.img }}">{{ item.content }}
+          </md-card-content>
+
+          <ng-template #noPicTpl>
+            <md-card-content bottom-0>
+              {{ item.content }}
+            </md-card-content>
+          </ng-template>
+
+        </md-card></md-tab>
+      <md-tab label="已读">
+        <md-card class="main-card" *ngFor="let item of items">
+
+          <md-card-header>
+            <div md-card-avatar class="example-header-image"></div>
+            <md-card-title>{{ item.title }}</md-card-title>
+            <md-card-subtitle>Dog Breed</md-card-subtitle>
+          </md-card-header>
+
+          <md-card-content *ngIf="item.img; else noPicTpl" hasPic bottom-0>
+            <img main-item-img src="{{ item.img }}">{{ item.content }}
+          </md-card-content>
+
+          <ng-template #noPicTpl>
+            <md-card-content bottom-0>
+              {{ item.content }}
+            </md-card-content>
+          </ng-template>
+
+        </md-card></md-tab>
+    </md-tab-group>
+
+  </div>
+
+</div>

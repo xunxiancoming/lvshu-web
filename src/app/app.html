@@ -1,0 +1,37 @@
+<md-toolbar nav color="primary">
+  <div class="button-row" center-container>
+    <button md-button left-0>
+      <img src="../assets/logo-md.png" logo-img>
+    </button>
+    <button md-button nav-bar-text routerLink="" hide-when-sm>首页</button>
+    <button md-button nav-bar-text routerLink="explore" hide-when-sm>发现</button>
+    <button md-button nav-bar-text routerLink="msg"  hide-when-sm>消息</button>
+    <button md-button nav-bar-text routerLink="mine"  hide-when-sm>我的</button>
+
+    <button md-icon-button [mdMenuTriggerFor]="menu"  show-when-sm >
+      <md-icon>more_vert</md-icon>
+    </button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item routerLink="">
+        <span>首页</span>
+      </button>
+      <button md-menu-item routerLink="explore">
+        <span>发现</span>
+      </button>
+      <button md-menu-item routerLink="msg">
+        <span>消息</span>
+      </button>
+      <button md-menu-item routerLink="mine">
+        <span>我的</span>
+      </button>
+      <!--
+      <button md-menu-item>
+        <md-icon>notifications_off</md-icon>
+        <span>Disable alerts</span>
+      </button>-->
+    </md-menu>
+
+  </div>
+</md-toolbar>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+[sub-title] {
+  padding: 8px 16px 8px 0;
+}
+
+.mat-list-icon {
+  color: rgba(0, 150, 255, 0.54);
+}
+
+[side-button] {
+  display: block;
+}

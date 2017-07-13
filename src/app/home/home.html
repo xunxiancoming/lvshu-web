@@ -1,0 +1,92 @@
+<div center-container main-content-margin>
+
+  <div main>
+    <md-list>
+
+      <button md-button left-0 sub-title>
+        <md-icon>live_help</md-icon>
+        提问
+      </button>
+      <button md-button left-0 sub-title>
+        <md-icon>send</md-icon>
+        回答
+      </button>
+      <button md-button left-0 sub-title routerLink="articleAdd">
+        <md-icon>create</md-icon>
+        文章
+      </button>
+
+      <md-divider></md-divider>
+
+      <button md-button disabled left-0 sub-title>
+        <md-icon>list</md-icon>
+        最新动态
+      </button>
+
+      <md-card class="main-card" *ngFor="let item of items">
+
+        <md-card-header>
+          <div md-card-avatar class="example-header-image"></div>
+          <md-card-title>{{ item.title }}</md-card-title>
+          <md-card-subtitle>Dog Breed</md-card-subtitle>
+        </md-card-header>
+
+        <md-card-content *ngIf="item.img; else noPicTpl" hasPic bottom-0>
+          <img main-item-img src="{{ item.img }}">{{ item.content | brief }}
+        </md-card-content>
+
+        <ng-template #noPicTpl>
+          <md-card-content bottom-0>
+            {{ item.content | brief}}
+          </md-card-content>
+        </ng-template>
+
+        <md-card-actions>
+          <button md-button>
+            <md-icon class="example-icon">favorite</md-icon>
+            喜欢
+          </button>
+          <button md-button>
+            <md-icon class="example-icon">share</md-icon>
+            分享
+          </button>
+          <button md-button>
+            <md-icon class="example-icon">comment</md-icon>
+            评论
+          </button>
+        </md-card-actions>
+
+      </md-card>
+
+    </md-list>
+  </div>
+
+  <div side>
+    <md-list>
+
+      <md-card class="side-card" margin-bottom>
+
+        <button md-button side-button>我的关注</button>
+        <button md-button side-button>我的收藏</button>
+        <button md-button side-button>邀请我回答的问题</button>
+
+      </md-card>
+
+      <md-card class="side-card" margin-bottom>
+
+        <button md-button side-button>社区服务中心</button>
+
+      </md-card>
+
+      <md-card class="side-card" margin-bottom>
+
+        <button md-button side-button>回答</button>
+        <button md-button side-button>问题</button>
+        <button md-button side-button>专栏</button>
+
+      </md-card>
+
+    </md-list>
+  </div>
+
+</div>
